@@ -1,0 +1,16 @@
+<h3>Employee Info</h3>
+<%= @employee.name %>
+
+<h3>Empoyee Company Info</h3>
+
+<!-- Example of violation of Law of Demeter
+  <%#= @employee.company.name %>,
+  <%#= @employee.company.location.city %>,
+  <%#= @employee.company.location.street %>
+-->
+
+<!-- Correct code -->
+<%= @employee.company_name %>,
+<%= @employee.company_city %>,
+<%= @employee.company_street %>,
+<%= @employee.company_zip_code %>
